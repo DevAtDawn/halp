@@ -6,14 +6,14 @@ import sys
 import os
 from os import system, name
 # from time import sleep
-  
+
 # define our clear function
 def clear():
-  
+
     # for windows
     if name == 'nt':
         _ = system('cls')
-  
+
     # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
@@ -45,11 +45,11 @@ def parse_json(data, num=0, inter=False):
         except:
             pass
     # return out
-    # print(d["answers"][num]["answer"]) 
-    # print(d) 
-    # print(d["answers"]) 
-    # print(d["answers"][0]) 
-        # print(d["answers"][0]["answer"]) 
+    # print(d["answers"][num]["answer"])
+    # print(d)
+    # print(d["answers"])
+    # print(d["answers"][0])
+        # print(d["answers"][0]["answer"])
 global count
 count = 0
 
@@ -74,10 +74,10 @@ def interactive():
         # os.system('echo "{}"|xclip'.format(data))
         stri = 'echo "{}" | nvim'.format(data)
         # print(stri)
-        os.system(stri)
+        # os.system(stri)
 
     else: return False
-    
+
 def main():
     # n = len(sys.argv)
     usr_arg = sys.argv
@@ -85,8 +85,8 @@ def main():
     if length == 1:
         print('\n### show next answer [y]/[n], previous [p], copy[c] :\n')
         uin = input("Enter Query: ")
-    # if length 
-        # usr_arg0 = 1 
+    # if length
+        # usr_arg0 = 1
         # usr_arg1 = usr_arg[2]
         url = make_url(uin)
         global res
